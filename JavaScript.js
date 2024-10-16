@@ -98,17 +98,14 @@
 
 // Example of using continue statement
 
-for (var i = 1; i <= 5; i++) {
-    if (i % 2 !== 0) {
-        continue; 
-        // console.log(i);
-        
-    }
+// for (var i = 1; i <= 5; i++) {
+//     if (i % 2 !== 0) {
+//         continue; 
+//     }
+//     console.log("Iteration: " + i);
+// }
 
-    console.log("Iteration: " + i);
-}
-
-console.log("Exited the loop.");
+// console.log("Exited the loop.");
 
 // The Odd or Even Sum
 
@@ -122,7 +119,6 @@ console.log("Exited the loop.");
 //         oddSum += i
 //     }
 // }
-
 // console.log(oddSum, evenSum);
 
 
@@ -132,25 +128,15 @@ console.log("Exited the loop.");
 // let gradeScore = { A: 0, B: 0, C: 0, D: 0, E: 0 }
 
 // for (let score of scores) {
-//     if (score >= 90) {
-//         gradeScore.A++
-//     }
+//     if (score >= 90) gradeScore.A++
 
-//     if (score >= 80) {
-//         gradeScore.B++
-//     }
+//     if (score >= 80) gradeScore.B++
 
-//     if (score >= 70) {
-//         gradeScore.C++
-//     }
+//     if (score >= 70) gradeScore.C++
 
-//     if (score >= 60) {
-//         gradeScore.D++
-//     }
+//     if (score >= 60) gradeScore.D++
 
-//     else {
-//         gradeScore.E++
-//     }
+//     else gradeScore.E++
 // }
 
 // console.log(gradeScore);
@@ -185,7 +171,8 @@ console.log("Exited the loop.");
 
 // Null Coalescing
 // const person = {
-//     age: 'Jeelani'
+//     name: "Jeelani",
+//     age: 28
 // }
 
 // console.log(person.name ?? 'Unknow');
@@ -197,31 +184,28 @@ console.log("Exited the loop.");
 // Promise.allSettled(promises).then((result) => console.log(result))
 
 
-// var containsNearbyDuplicate = function (nums, k) {
+// var containsNearbyDuplicate = function (nums, k) { 
 //     // Your code goes here
 //     const valueData = nums.filter((value, index, arr) => {
 //         return value.indexOf(index) !== k
 //     })
 //     return valueData
-
 // };
 // console.log(containsNearbyDuplicate([1, 2, 3, 1], 3));
 
 
 
 // function factorial(n) {
+//     if (n < 0) return "Factorial is not defined for negative numbers";
 //     if (n === 0) return 1
 //     let num = 1;
-
 //     for (let i = 1; i <= n; i++) {
 //         num = num * n
 //         n--
 //     }
 //     return num
 // }
-
-
-// console.log(factorial(-3));
+// console.log(factorial(3));
 
 
 
@@ -241,27 +225,23 @@ console.log("Exited the loop.");
 //         }
 //     }
 //     return num
-
 // }
-
 // console.log(findLargest([2, 1, 5, 3, 7, 6, 9, -10]));
 
 
 // function removeDuplicate(arr) {
 //     return [...new Set(arr)]
 // }
-
 // console.log(removeDuplicate([1, 2, 2, 3, 4, 4, 5]));
 
 
 // function primeOrNot(num) {
 //     if (num <= 0) return false
 //     for (let i = 2; i < num; i++) {
-//         if (num % 1 === 0) return false
+//         if (num % i === 0) return false
 //     }
 //     return true
 // }
-
 // console.log(primeOrNot(3));
 
 
@@ -272,31 +252,25 @@ console.log("Exited the loop.");
 //     }
 //     return add
 // }
-
 // console.log(sumArray([1, 2, 2, 3, 4, 4, 5]));
 
 
 // function findIndex(arr, num) {
 //     return arr.indexOf(num)
-
 // }
 // console.log(findIndex([1, 2, 3, 4, 5], 4));
 
 
 // function anagram(str1, str2) {
 //     const sortedStr = str => str.split('').sort().join('')
-//     console.log(sortedStr(str1), sortedStr(str2));
-
 //     return sortedStr(str1) === sortedStr(str2)
 // }
-
 // console.log(anagram("listen", "silent"));
 
 
 // function capitalizeWords(str) {
 //     return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')
 // }
-
 // console.log(capitalizeWords("hello world"));
 
 
@@ -308,34 +282,31 @@ console.log("Exited the loop.");
 //     }
 //     return count
 // }
-
-
 // console.log(countVowels("Hello"));
 
 
 // function celsiusToFahrenheit(celsius) {
+//     // Formula=( 5/ 9 × C) +32
 //     return (celsius * 9 / 5) + 32
 // }
-
 // console.log(celsiusToFahrenheit(25));
 
 
 // function secondLargest(arr) {
-//     let largest = Math.max(); let secondLargest = Math.max()
-
+//     let largest = Math.max(); 
+//     let secondLargest = Math.max()
 //     for (let num of arr) {
 //         if (num > largest) {
 //             secondLargest = largest;
 //             largest = num
-
 //         } else if (num > secondLargest && num != secondLargest) {
 //             secondLargest = num
 //         }
 //     }
-//     // return secondLargest
+//     return secondLargest
 // }
-
 // console.log(secondLargest([3, 5, 7, 2, 8]));
+
 
 // function countCharacter(words, char) {
 //     let count = 0
@@ -344,21 +315,17 @@ console.log("Exited the loop.");
 //             count++
 //         }
 //     }
-
 //     return count;
 // }
-
 // console.log(countCharacter("hello world", "l"));
 
 
 // function arraysEqual(arr1, arr2) {
 //     if (arr1.length !== arr2.length) return false
-
 //     for (let i = 0; i < arr1.length; i++) {
 //         if (arr1[i] !== arr2[i]) return false
 //     }
 //     return true
-
 // }
 // console.log(arraysEqual([1, 2, 3], [1, 2, 3]));
 // console.log(arraysEqual([1, 2, 3], [1, 2, 4]));
@@ -375,7 +342,6 @@ console.log("Exited the loop.");
 //     }
 //     return flatArray;
 // }
-
 // console.log(flattenArray([1, [2, [3, [4]], 5]]));
 
 // function sumOfDigits(num) {
@@ -402,8 +368,8 @@ console.log("Exited the loop.");
 // function randomNumberBetween(num1, num2) {
 //     return Math.floor(Math.random() * (num2 - num1 + 1)) + num1
 // }
-
 // console.log(randomNumberBetween(1, 10));
+
 
 // function isPerfectSquare(num) {
 //     return Math.sqrt(num) % 1 === 0
@@ -416,9 +382,9 @@ console.log("Exited the loop.");
 //     }
 //     return false
 // }
-
 // console.log(isPerfectSquare(16));
 // console.log(isPerfectSquare(20));
+
 
 // function arrayIntersection(arr1, arr2) {
 //     let arrayIntersection = []
@@ -431,13 +397,11 @@ console.log("Exited the loop.");
 //     }
 //     return arrayIntersection
 // }
-
 // console.log(arrayIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 8, 9]));
 
 // function mergeAndSort(arr1, arr2) {
 //     const mergeArray = arr1.concat(arr2).sort((a, b) => a - b)
 //     return mergeArray
-
 // }
 
 // function mergeAndSort(arr1, arr2) {
